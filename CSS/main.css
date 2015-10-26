@@ -33,7 +33,7 @@ header h1, footer h1 {
   width: 100%;
   margin: 0 auto;
   background-color: #f1f1f1;
-  height: 1125px;
+  height: 1300px;
 }
 
 .button_container {
@@ -47,7 +47,7 @@ header h1, footer h1 {
 }
 
 .app_container {
-  height: 80%;
+  height: 800px;
   width: 100%;
   margin: auto;
   margin-top: -10px;
@@ -60,7 +60,7 @@ header h1, footer h1 {
 .form_container {
   background-color: #D46A6A;
   width: 65%;
-  height: 250px;
+  height: 275px;
   display: none;
   margin: auto;
   margin-top: 25px;
@@ -92,11 +92,12 @@ form {
 
 form select,
 form input {
-  width: 55%;
+  width: 50%;
   background-color: #f1f1f1;
   border: none;
   margin: auto;
   margin-top: 15px;
+  margin-left: 20px;
   border-radius: 3px;
 }
 
@@ -115,6 +116,17 @@ form input[name="npc_Name"] {
   text-align: center;
 }
 
+input[type=submit] {
+  width: 33%;
+  margin-top: 20px;
+  margin-left: 33%;
+
+  color: #fff;
+  background-color: #ffa2a2;
+  border: 2px solid #f1f1f1;
+  border-radius: 8px;
+}
+
 form input:focus,
 form select:focus {
   outline-color: #AA3939;
@@ -123,17 +135,6 @@ form select:focus {
 
 form hr {
   width: 85%;
-}
-
-input[type=submit] {
-  width: 33%;
-  margin-top: 35px;
-  margin-left: 33%;
-
-  color: #fff;
-  background-color: #ffa2a2;
-  border: 2px solid #f1f1f1;
-  border-radius: 8px;
 }
 
 .generate_button {

@@ -34,9 +34,9 @@ function namePicker() {
 }
 
 //DETECT IF Trait IS SELECTED
-function traitDetect(idSelect, array) {
-  if($(idSelect).val() === "Random") {
-    return randomArrayPick(array);
+function traitDetect(idSelect, array, randomFunction) {
+  if($(idSelect).val() === "random") {
+    return randomFunction(array);
   } else {
     return $(idSelect).val();
   }
@@ -44,13 +44,13 @@ function traitDetect(idSelect, array) {
 
 //NPC CREATION OBJECT
 function npcCharacterCreate() {
-  var alignment = randomObjKeyPicker(alignmentIdealsObj);
+  var alignment = traitDetect('#npc_Alignment_Selection', alignmentIdealsObj, randomObjKeyPicker);
   npcCharacter = {
     firstName: namePicker(),
-    race: traitDetect('#npc_Race_Selection', npcRace),
+    race: traitDetect('#npc_Race_Selection', npcRace, randomArrayPick),
     feature: randomArrayPick(npcFeature),
-    highAbility: randomArrayPick(npcHighAbilities),
-    lowAbility: randomArrayPick(npcLowAbilities),
+    highAbility: traitDetect('#npc_HighAbility_Selection', npcHighAbilities, randomArrayPick),
+    lowAbility: traitDetect('#npc_LowAbility_Selection', npcHighAbilities, randomArrayPick),
     talent: randomArrayPick(npcTalents),
     mannerism: randomArrayPick(npcMannerisms),
     interactionTrait: randomArrayPick(npcInteractionTraits),
@@ -134,12 +134,12 @@ $('#generate_button').click( function() {
 }); //end of click
 
 $('#preset_button').click( function() {
-  $(".form_container").fadeToggle("400", function() {
+  $(".form_container").fadeToggle("200", function() {
     //define button layout
     var buttonLayoutStyle = $(".button_container").css("justify-content", "space-between");
     buttonLayoutStyle;
     //hide generate button
-    $("#generate_button").fadeToggle( function() 
+    $("#generate_button").fadeToggle("200", function() 
     {
       if (formVisibility() === true) {
         //change button layout
