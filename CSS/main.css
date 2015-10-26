@@ -1,0 +1,210 @@
+html,
+body {
+  text-decoration: none;
+  margin: 0;
+}
+html h1, html h2, html h3, html h4, html h5, html h6,
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+form label {
+  font-family: 'Cabin', sans-serif;
+}
+
+header, footer {
+  height: 90px;
+  text-align: center;
+  background-color: #D46A6A;
+  padding: 30px 0;
+  width: 100%;
+  margin: auto;
+  border-bottom: 8px solid #AA3939;
+}
+header h1, footer h1 {
+  color: #fff;
+  font-size: 3em;
+  letter-spacing: 1.5px;
+}
+
+.main_wrapper {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #f1f1f1;
+  height: 1300px;
+}
+
+.button_container {
+  padding-top: 50px;
+  margin: auto;
+  width: 65%;
+  height: 65px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.app_container {
+  height: 800px;
+  width: 100%;
+  margin: auto;
+  margin-top: -10px;
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.form_container {
+  background-color: #D46A6A;
+  width: 65%;
+  height: 275px;
+  display: none;
+  margin: auto;
+  margin-top: 25px;
+}
+
+.npc_info_wrapper {
+  background-color: #D46A6A;
+  width: 65%;
+  height: 775px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.npc_container {
+  border-radius: 5px;
+  height: 93%;
+  width: 86.5%;
+  background-color: #AA3939;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+form {
+  padding-top: 35px;
+}
+
+form select,
+form input {
+  width: 50%;
+  background-color: #f1f1f1;
+  border: none;
+  margin: auto;
+  margin-top: 15px;
+  margin-left: 20px;
+  border-radius: 3px;
+}
+
+form label {
+  display: inline-block;
+  color: #fff;
+  margin-left: 20px;
+  width: 30%;
+  text-transform: uppercase;
+}
+
+form input[name="npc_Name"] {
+  height: 40px;
+  margin-top: -12px;
+  font-size: 1.3em;
+  text-align: center;
+}
+
+input[type=submit] {
+  width: 33%;
+  margin-top: 20px;
+  margin-left: 33%;
+
+  color: #fff;
+  background-color: #ffa2a2;
+  border: 2px solid #f1f1f1;
+  border-radius: 8px;
+}
+
+form input:focus,
+form select:focus {
+  outline-color: #AA3939;
+  outline-width: 5px;
+}
+
+form hr {
+  width: 85%;
+}
+
+.generate_button {
+  display: inline-block;
+  padding: 10px 8px;
+  height: 35px;
+  width: 100px;
+  border: 6px solid #D46A6A;
+  border-radius: 8px;
+  background-color: #ffa2a2;
+  text-align: center;
+  vertical-align: middle;
+  color: #fff;
+  font-size: 1em;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+input[type=submit]:hover,
+.generate_button:hover {
+  background-color: #c94242;
+  transition: 0.1s;
+}
+
+input[type=submit]:active,
+.generate_button:active {
+  background-color: #c94242;
+  border-color: #FFAAAA;
+  transition: 0.1s;
+}
+
+#npc_container {
+  display: none;
+}
+
+.npc_container > * {
+  width: 80%;
+  margin: auto;
+  color: #fff;
+  font-family: sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 3px;
+}
+
+.npc {
+  margin-left: 15px;
+  margin-top: 5px;
+  font-size: .9em;
+  color: #f2f2f2;
+  text-transform: capitalize;
+  font-family: 'droid sans';
+}
+
+.npc_namerace_container {
+  text-transform: uppercase;
+}
+.npc_namerace_container h2, .npc_namerace_container h4 {
+  margin: 5px 18px 8px 0;
+  text-align: center;
+}
+.npc_namerace_container hr,
+form hr {
+  background-color: #fff;
+  height: 2px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+footer {
+  border: none;
+  height: 30px;
+}

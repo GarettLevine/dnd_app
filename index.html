@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>D&D TOOLS - NPC Generater</title>
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+  </head>
+
+  <body>
+    <header>
+      <h1>D&D NPC GENERATER</h1>
+    </header>
+    <section class="main_wrapper">
+      <div class="button_container">
+        <div id="generate_button" class="generate_button">Completely Random</div>
+        <div id="preset_button" class="generate_button">Pick a Few Things</div>
+      </div>
+
+      <section class="form_container">
+          <form id="form">
+            <label>Character Name</label>
+            <input type="text" name="npc_Name" id="npc_FormName">
+            <label>Race</label>
+            <select id="npc_Race_Selection"></select>
+            <label>High Ability</label>
+            <select id="npc_HighAbility_Selection"></select>
+            <label>Low Ability</label>
+            <select id="npc_LowAbility_Selection"></select>
+            <label>Alignment</label>
+            <select id="npc_Alignment_Selection"></select>
+            <input type="submit" name="submit" value="Kinda Random" id="submitButton">
+          </form>
+        </section>
+
+      <div class="app_container">
+        <section class="npc_info_wrapper">
+          <div id="npc_container" class="npc_container">
+            <div class="npc_namerace_container">
+              <h2 id="npc_name" class="npc_name">NAME</h2>
+              <h4 id="npc_race" class="npc_race">RACE</h4>
+
+              <hr />
+            </div>
+           
+            <div>Feature
+              <div id="npc_feature"  class="npc_feature npc"></div>
+            </div>
+            <div>High Ability
+              <div id="npc_highAbility" class="npc_highAbility npc"></div>
+            </div>
+            <div>Low Ability
+              <div id="npc_lowAbility" class="npc_lowAbility npc"></div>
+            </div>
+            <div>Talent
+              <div id="npc_talent" class="npc_talent npc"></div>
+            </div>
+            <div>Mannerisms
+              <div id="npc_mannerisms" class="npc_mannerisms npc"></div>
+            </div>
+            <div>Interaction
+              <div id="npc_interaction"class="npc_interaction npc"></div>
+            </div>
+            <div>Alignment
+              <div id="npc_alignment" class="npc_ideal npc"></div>
+            </div>
+            <div>Bond
+              <div id="npc_bond" class="npc_bond npc"></div>
+            </div>
+            <div>Flaw
+              <div id="npc_flaw" class="npc_flaw npc"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <footer>
+    </footer>
+    <script src="JS/npc_database.js"></script>
+    <script src="JS/app.js"></script>
+  </body>
+</html>
