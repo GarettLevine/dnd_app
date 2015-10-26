@@ -63,7 +63,7 @@ header h1, footer h1 {
   height: 250px;
   display: none;
   margin: auto;
-  margin-top: 0px;
+  margin-top: 25px;
 }
 
 .npc_info_wrapper {
@@ -87,7 +87,7 @@ header h1, footer h1 {
 }
 
 form {
-  padding-top: 20px;
+  padding-top: 35px;
 }
 
 form select,
@@ -127,6 +127,7 @@ form hr {
 
 input[type=submit] {
   width: 33%;
+  margin-top: 35px;
   margin-left: 33%;
 
   color: #fff;

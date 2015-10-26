@@ -122,15 +122,33 @@ function buttonTextChange(message1, message2, buttonSelect) {
 }
 
 //BUTTON CLICKS
+$('#submitButton').click( function() {
+  event.preventDefault();
+  npcCharacterCreate();
+  appendCharacterToPage();
+});
+ //end of submitButton click
 $('#generate_button').click( function() {
   npcCharacterCreate();
   appendCharacterToPage();
-  console.log($('#npc_FormName').val())
 }); //end of click
 
 $('#preset_button').click( function() {
   $(".form_container").fadeToggle("400", function() {
-    buttonTextChange("A Little Random", "Completly Random", '#generate_button');
+    //define button layout
+    var buttonLayoutStyle = $(".button_container").css("justify-content", "space-between");
+    buttonLayoutStyle;
+    //hide generate button
+    $("#generate_button").fadeToggle( function() 
+    {
+      if (formVisibility() === true) {
+        //change button layout
+      $(".button_container").css("justify-content", "flex-end");
+    } else {
+        //maintain origional layout
+      buttonLayoutStyle;
+    }
+  }); //end of fadeToggle
     buttonTextChange("Pick Less Things", "Pick a few Things", '#preset_button');
     formReset();
   }); //end of toggle
