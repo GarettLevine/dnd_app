@@ -39,7 +39,7 @@ header h1, footer h1 {
 .button_container {
   padding-top: 50px;
   margin: auto;
-  width: 300px;
+  width: 65%;
   height: 65px;
   display: flex;
   justify-content: space-between;
@@ -50,6 +50,7 @@ header h1, footer h1 {
   height: 80%;
   width: 100%;
   margin: auto;
+  margin-top: -10px;
   padding-top: 50px;
   display: flex;
   justify-content: center;
@@ -58,14 +59,16 @@ header h1, footer h1 {
 
 .form_container {
   background-color: #D46A6A;
-  width: 47%;
-  height: 220px;
+  width: 65%;
+  height: 250px;
   display: none;
+  margin: auto;
+  margin-top: 0px;
 }
 
 .npc_info_wrapper {
   background-color: #D46A6A;
-  width: 40%;
+  width: 65%;
   height: 775px;
   display: flex;
   align-items: center;
@@ -84,7 +87,7 @@ header h1, footer h1 {
 }
 
 form {
-  margin-top: 20px;
+  padding-top: 20px;
 }
 
 form select,
@@ -99,7 +102,6 @@ form input {
 
 form label {
   display: inline-block;
-  text-align: left;
   color: #fff;
   margin-left: 20px;
   width: 30%;
@@ -116,16 +118,27 @@ form input[name="npc_Name"] {
 form input:focus,
 form select:focus {
   outline-color: #AA3939;
-  outline-width: 13px;
+  outline-width: 5px;
 }
 
 form hr {
   width: 85%;
 }
 
+input[type=submit] {
+  width: 33%;
+  margin-left: 33%;
+
+  color: #fff;
+  background-color: #ffa2a2;
+  border: 2px solid #f1f1f1;
+  border-radius: 8px;
+}
+
 .generate_button {
   display: inline-block;
   padding: 10px 8px;
+  height: 35px;
   width: 100px;
   border: 6px solid #D46A6A;
   border-radius: 8px;
@@ -138,11 +151,13 @@ form hr {
   font-weight: 700;
 }
 
+input[type=submit]:hover,
 .generate_button:hover {
-  background-color: #D46A6A;
+  background-color: #c94242;
   transition: 0.1s;
 }
 
+input[type=submit]:active,
 .generate_button:active {
   background-color: #c94242;
   border-color: #FFAAAA;

@@ -102,17 +102,17 @@ function appendCharacterToPage() {
   $("#npc_bond").html(npcCharacter.bond);
   $("#npc_flaw").html(npcCharacter.flaw);
 }
-
+//check if form is visible
 function formVisibility() {
   return $(".form_container").is(":visible");
 }
-
+//reser form if not visible
 function formReset() {
   if(formVisibility() === false) {
     $("#form")[0].reset();
   }
 }
-
+//change button text if visiblenot visible
 function buttonTextChange(message1, message2, buttonSelect) {
   if(formVisibility()) {
     $(buttonSelect).html(message1);
@@ -129,7 +129,7 @@ $('#generate_button').click( function() {
 }); //end of click
 
 $('#preset_button').click( function() {
-  $(".form_container").toggle("right", function() {
+  $(".form_container").fadeToggle("400", function() {
     buttonTextChange("A Little Random", "Completly Random", '#generate_button');
     buttonTextChange("Pick Less Things", "Pick a few Things", '#preset_button');
     formReset();

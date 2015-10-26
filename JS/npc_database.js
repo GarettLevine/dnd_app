@@ -43,3 +43,4 @@ var npcBonds = ["dedicated to fulfilling a personal life goal", "protective of c
 
 //FLAW DATABASE
 npcFlawSecret = ["forbidden love", "susceptibility to romance", "enjoys decadence", "arrogant", "envies another person's possesion", "envies another person's station", "overpowering greed", "prone to rage", "has a powerful enemy", "arachnaphobic", "xenophobic", "a biggot", "shamful secret", "scanadalous secret", "secret crime", "secret misdeed", "posession of forbidden lore", "foolhardy bravery"];
+
