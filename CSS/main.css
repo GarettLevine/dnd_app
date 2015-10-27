@@ -59,8 +59,8 @@ header h1, footer h1 {
 
 .form_container {
   background-color: #D46A6A;
-  width: 65%;
-  height: 275px;
+  width: 70%;
+  height: 300px;
   display: none;
   margin: auto;
   margin-top: 25px;
@@ -87,7 +87,7 @@ header h1, footer h1 {
 }
 
 form {
-  padding-top: 35px;
+  padding-top: 40px;
 }
 
 form select,
@@ -144,7 +144,7 @@ input[type=submit] {
 
 .generate_button {
   display: inline-block;
-  padding: 10px 8px;
+  padding: 6px 8px;
   height: 35px;
   width: 100px;
   border: 6px solid #D46A6A;
