@@ -42,15 +42,24 @@ function traitDetect(idSelect, array, randomFunction) {
   }
 }
 
+//ability detect
+function abilityDetect() {
+  if(npcCharacter.lowAbility === npcCharacter.highAbility) {
+    return randomObjKeyPicker(lowAbilityObj);
+  } 
+}
+
 //NPC CREATION OBJECT
 function npcCharacterCreate() {
   var alignment = traitDetect('#npc_Alignment_Selection', alignmentIdealsObj, randomObjKeyPicker);
+  var highAbility = traitDetect('#npc_HighAbility_Selection', highAbilityObj, randomObjKeyPicker);
+  var lowAbility = traitDetect('#npc_LowAbility_Selection', lowAbilityObj, randomObjKeyPicker);
   npcCharacter = {
     firstName: namePicker(),
     race: traitDetect('#npc_Race_Selection', npcRace, randomArrayPick),
     feature: randomArrayPick(npcFeature),
-    highAbility: traitDetect('#npc_HighAbility_Selection', npcHighAbilities, randomArrayPick),
-    lowAbility: traitDetect('#npc_LowAbility_Selection', npcHighAbilities, randomArrayPick),
+    highAbility: highAbility,
+    lowAbility: lowAbility,
     talent: randomArrayPick(npcTalents),
     mannerism: randomArrayPick(npcMannerisms),
     interactionTrait: randomArrayPick(npcInteractionTraits),
@@ -79,8 +88,8 @@ function selectionCreator(array, selectID) {
 
 //APPEND SELECTIONS TO THE PAGE
 selectionCreator(npcRace, "#npc_Race_Selection");
-selectionCreator(npcHighAbilities, "#npc_HighAbility_Selection");
-selectionCreator(npcLowAbilities, "#npc_LowAbility_Selection");
+selectionCreator(Object.keys(highAbilityObj), "#npc_HighAbility_Selection");
+selectionCreator(Object.keys(lowAbilityObj), "#npc_LowAbility_Selection");
 selectionCreator(Object.keys(alignmentIdealsObj), "#npc_Alignment_Selection");
 
 

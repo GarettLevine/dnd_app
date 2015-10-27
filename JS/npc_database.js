@@ -15,10 +15,26 @@ var npcRace = ["Human", "Orc", "Half-Elf", "Elf", "Dwarf", "Halfling", "Gnome", 
 var npcFeature = ["wears distinctive jewelery", "has piercings", "wears flamboyant or outlandish clothes", "wears formal, clean clothes", "wears ragged, dirty clothes", "pronounced scar", "missing teeth", "unusual eye colour(or two different colours)", "has tattoos", "has a birthmark", "has unusual skin colour", "is bald", "has braided beard or hair", "has unusual hair color", "has a nervous twitch", "has a distinctive nose", "has a distinctive posture", "is expetionally beautiful", "is expetionally Ugly"];
 
 ///ABILITIES DATABASE
+highAbilityObj = {
+	strength: ["Powerful", "Brawny", "Strong as an Oxe"],
+	dexteriy: ["Agile", "Lithe", "Graceful"],
+	constituion: ["Hardy", "Hale", "Healthy"],
+	intelligence: ["Intelligent", "Studious", "Learned"],
+	wisdom: ["Perceptive", "Insightful", "Spiritual"],
+	charisma: ["Persuasive", "Born Leader", "Forceful"]
+}
+
 var npcHighAbilities = ["Strength: Powerful", "Strength: Brawny", "Strength: Strong as an oxe!", "Dexterity: Lithe", "Dexterity: Agile", "Dexterity: Graceful", "Constituion: Hardy", "Constitution: Hale", "Constitution: Healthy", "Intelligence: Studious", "Intelligence: Learned", "Intelligence: Inquisitive", "Wisdom: Perceptive", "Wisdom: Spiritual", "Wisdom: Insightful", "Charisma: Persuasive", "Charisma: Forceful", "Charisma: Born Leader"];
 
 var npcLowAbilities = ["Strength: Feeble", "Strength: Scrawny", "Dexterity: Clumsy", "Dexterity: Fumbling", "Constitution: Sickly", "Constitution: Pale", "Intelligence: Dim-witted", "Intelligence: Slow", "Wisdom: Oblivious", "Wisdom: Absentminded", "Charisma: Dull", "Charisma: Boring"];
-
+lowAbilityObj = {
+	strength: ["Feeble", "Scrawny"],
+	dexteriy: ["Clumsy", "Fumbling"],
+	constituion: ["Sickly", "Pale"],
+	intelligence: ["Dim-witted", "Slow"],
+	wisdom: ["Oblivious", "Absentminded"],
+	charisma: ["Dull", "Boring"]
+}
 //TALENT DATABASE
 var npcTalents = ["plays a musical instrument.", "speaks several languages fluently", "unbelievably lucky", "perfect memory.", "great with animals", "great with children", "great at solving puzzles", "great at one game", "great at impersonations", "draws beautifully", "paints beautifully", "sings beautifully", "drinks everyone under the table", "expert carpenter", "expert cook", "expert dart thrower", "expert rock skipper", "expert juggler", "skilled actor and master of disguise", "skilled dancer", "knows thieves' cant"];
 
