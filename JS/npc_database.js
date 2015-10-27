@@ -24,9 +24,6 @@ highAbilityObj = {
 	charisma: ["Persuasive", "Born Leader", "Forceful"]
 }
 
-var npcHighAbilities = ["Strength: Powerful", "Strength: Brawny", "Strength: Strong as an oxe!", "Dexterity: Lithe", "Dexterity: Agile", "Dexterity: Graceful", "Constituion: Hardy", "Constitution: Hale", "Constitution: Healthy", "Intelligence: Studious", "Intelligence: Learned", "Intelligence: Inquisitive", "Wisdom: Perceptive", "Wisdom: Spiritual", "Wisdom: Insightful", "Charisma: Persuasive", "Charisma: Forceful", "Charisma: Born Leader"];
-
-var npcLowAbilities = ["Strength: Feeble", "Strength: Scrawny", "Dexterity: Clumsy", "Dexterity: Fumbling", "Constitution: Sickly", "Constitution: Pale", "Intelligence: Dim-witted", "Intelligence: Slow", "Wisdom: Oblivious", "Wisdom: Absentminded", "Charisma: Dull", "Charisma: Boring"];
 lowAbilityObj = {
 	strength: ["Feeble", "Scrawny"],
 	dexteriy: ["Clumsy", "Fumbling"],

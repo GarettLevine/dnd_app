@@ -54,12 +54,18 @@ function npcCharacterCreate() {
   var alignment = traitDetect('#npc_Alignment_Selection', alignmentIdealsObj, randomObjKeyPicker);
   var highAbility = traitDetect('#npc_HighAbility_Selection', highAbilityObj, randomObjKeyPicker);
   var lowAbility = traitDetect('#npc_LowAbility_Selection', lowAbilityObj, randomObjKeyPicker);
+  while (highAbility === lowAbility) {
+    lowAbility = randomObjKeyPicker(lowAbility);
+    return lowAbility;
+  }
   npcCharacter = {
     firstName: namePicker(),
     race: traitDetect('#npc_Race_Selection', npcRace, randomArrayPick),
     feature: randomArrayPick(npcFeature),
     highAbility: highAbility,
+    highAbilityDescriptor: randomArrayPick(highAbilityObj[highAbility]),
     lowAbility: lowAbility,
+    lowAbilityDescriptor: randomArrayPick(lowAbilityObj[lowAbility]),
     talent: randomArrayPick(npcTalents),
     mannerism: randomArrayPick(npcMannerisms),
     interactionTrait: randomArrayPick(npcInteractionTraits),
@@ -102,8 +108,8 @@ function appendCharacterToPage() {
   $("#npc_name").html(npcCharacter.firstName);
   $("#npc_race").html(npcCharacter.race);
   $("#npc_feature").html(npcCharacter.feature);
-  $("#npc_highAbility").html(npcCharacter.highAbility);
-  $("#npc_lowAbility").html(npcCharacter.lowAbility);
+  $("#npc_highAbility").html(npcCharacter.highAbility + ": " + npcCharacter.highAbilityDescriptor);
+  $("#npc_lowAbility").html(npcCharacter.lowAbility + ": " + npcCharacter.lowAbilityDescriptor);
   $("#npc_talent").html(npcCharacter.talent);
   $("#npc_mannerisms").html(npcCharacter.mannerism);
   $("#npc_interaction").html(npcCharacter.interactionTrait);
@@ -111,6 +117,7 @@ function appendCharacterToPage() {
   $("#npc_bond").html(npcCharacter.bond);
   $("#npc_flaw").html(npcCharacter.flaw);
 }
+
 //check if form is visible
 function formVisibility() {
   return $(".form_container").is(":visible");
