@@ -25,9 +25,9 @@ function nameCreator(array1, array2, array3) {
 }
 
 //DETECT IF NAME IS SELECTED
-function namePicker() {
+function namePicker(array1, array2, array3) {
   if(!$('#npc_FormName').val()){
-    return nameCreator(fnBeginning, fnMiddle, fnEnd);
+    return nameCreator(array1, array2, array3);
   } else {
     return $('#npc_FormName').val();
   }
@@ -54,12 +54,20 @@ function npcCharacterCreate() {
   var alignment = traitDetect('#npc_Alignment_Selection', alignmentIdealsObj, randomObjKeyPicker);
   var highAbility = traitDetect('#npc_HighAbility_Selection', highAbilityObj, randomObjKeyPicker);
   var lowAbility = traitDetect('#npc_LowAbility_Selection', lowAbilityObj, randomObjKeyPicker);
+  //if abilities are the same, reroll lowAbility
+  while (highAbility === lowAbility) {
+    lowAbility = randomObjKeyPicker(lowAbility);
+    return lowAbility;
+  }
   npcCharacter = {
-    firstName: namePicker(),
+    firstName: namePicker(fnBeginning, fnMiddle, fnEnd),
+    lastName: namePicker(lnBeginning, lnMiddle, lnEnd),
     race: traitDetect('#npc_Race_Selection', npcRace, randomArrayPick),
     feature: randomArrayPick(npcFeature),
     highAbility: highAbility,
+    highAbilityDescriptor: randomArrayPick(highAbilityObj[highAbility]),
     lowAbility: lowAbility,
+    lowAbilityDescriptor: randomArrayPick(lowAbilityObj[lowAbility]),
     talent: randomArrayPick(npcTalents),
     mannerism: randomArrayPick(npcMannerisms),
     interactionTrait: randomArrayPick(npcInteractionTraits),
@@ -68,6 +76,8 @@ function npcCharacterCreate() {
     bond: randomArrayPick(npcBonds),
     flaw: randomArrayPick(npcFlawSecret)
   };
+
+  appendCharacterToPage();
 }
 
 /**********************************************
@@ -99,11 +109,11 @@ selectionCreator(Object.keys(alignmentIdealsObj), "#npc_Alignment_Selection");
 //APPEND CHARACTER TO PAGE
 function appendCharacterToPage() {
   $('#npc_container').css("display", "inherit");
-  $("#npc_name").html(npcCharacter.firstName);
+  $("#npc_name").html(npcCharacter.firstName + " " + npcCharacter.lastName);
   $("#npc_race").html(npcCharacter.race);
   $("#npc_feature").html(npcCharacter.feature);
-  $("#npc_highAbility").html(npcCharacter.highAbility);
-  $("#npc_lowAbility").html(npcCharacter.lowAbility);
+  $("#npc_highAbility").html(npcCharacter.highAbility + ": " + npcCharacter.highAbilityDescriptor);
+  $("#npc_lowAbility").html(npcCharacter.lowAbility + ": " + npcCharacter.lowAbilityDescriptor);
   $("#npc_talent").html(npcCharacter.talent);
   $("#npc_mannerisms").html(npcCharacter.mannerism);
   $("#npc_interaction").html(npcCharacter.interactionTrait);
@@ -111,6 +121,7 @@ function appendCharacterToPage() {
   $("#npc_bond").html(npcCharacter.bond);
   $("#npc_flaw").html(npcCharacter.flaw);
 }
+
 //check if form is visible
 function formVisibility() {
   return $(".form_container").is(":visible");
@@ -134,12 +145,10 @@ function buttonTextChange(message1, message2, buttonSelect) {
 $('#submitButton').click( function() {
   event.preventDefault();
   npcCharacterCreate();
-  appendCharacterToPage();
 });
  //end of submitButton click
 $('#generate_button').click( function() {
   npcCharacterCreate();
-  appendCharacterToPage();
 }); //end of click
 
 $('#preset_button').click( function() {

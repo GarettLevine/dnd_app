@@ -7,6 +7,9 @@ var fnMiddle = ["bar", "ched", "dell", "far", "gran", "hal", "jen", "kel", "lim"
 var fnEnd = ["", "", "", "a", "ac", "ai", "al", "am", "an", "ar", "ea", "el", "er", "ess", "ett", "ic", "id", "il", "in", "is", "or", "us"];
 
 //LASTNAME DATABASE
+var lnBeginning = ["", "", "", "", "", "Bin", "Bell", "Oz", "Har", "De", "Hu", "Da", "Bre", "Mack", "Me", "Te", "Ka", "Ri", "Lie", "Do", "sla"];
+var lnMiddle = ["ford", "iveau", "iebe", "olos", "men", "in", "jam", "shie", "thi", "var", "ves", "nah", "rah", "hut", "hur", "sla", "nov"];
+var lnEnd = ["", "", "", "man", "ls", "ek", "ick", "mine", "se", "ard", "sley", "ahue", "rah", "eton", "ek", "ovsky", "e"];
 
 //RACE DATABASE
 var npcRace = ["Human", "Orc", "Half-Elf", "Elf", "Dwarf", "Halfling", "Gnome", "Dragonborn", "Tiefling"];
@@ -16,7 +19,7 @@ var npcFeature = ["wears distinctive jewelery", "has piercings", "wears flamboya
 
 ///ABILITIES DATABASE
 highAbilityObj = {
-	strength: ["Powerful", "Brawny", "Strong as an Oxe"],
+	strength: ["Powerful", "Brawny"],
 	dexteriy: ["Agile", "Lithe", "Graceful"],
 	constituion: ["Hardy", "Hale", "Healthy"],
 	intelligence: ["Intelligent", "Studious", "Learned"],
@@ -24,9 +27,6 @@ highAbilityObj = {
 	charisma: ["Persuasive", "Born Leader", "Forceful"]
 }
 
-var npcHighAbilities = ["Strength: Powerful", "Strength: Brawny", "Strength: Strong as an oxe!", "Dexterity: Lithe", "Dexterity: Agile", "Dexterity: Graceful", "Constituion: Hardy", "Constitution: Hale", "Constitution: Healthy", "Intelligence: Studious", "Intelligence: Learned", "Intelligence: Inquisitive", "Wisdom: Perceptive", "Wisdom: Spiritual", "Wisdom: Insightful", "Charisma: Persuasive", "Charisma: Forceful", "Charisma: Born Leader"];
-
-var npcLowAbilities = ["Strength: Feeble", "Strength: Scrawny", "Dexterity: Clumsy", "Dexterity: Fumbling", "Constitution: Sickly", "Constitution: Pale", "Intelligence: Dim-witted", "Intelligence: Slow", "Wisdom: Oblivious", "Wisdom: Absentminded", "Charisma: Dull", "Charisma: Boring"];
 lowAbilityObj = {
 	strength: ["Feeble", "Scrawny"],
 	dexteriy: ["Clumsy", "Fumbling"],
