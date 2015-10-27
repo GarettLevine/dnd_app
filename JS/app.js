@@ -155,7 +155,7 @@ $('#preset_button').click( function() {
       $(".button_container").css("justify-content", "flex-end");
     } else {
         //maintain origional layout
-      buttonLayoutStyle;
+      return buttonLayoutStyle;
     }
   }); //end of fadeToggle
     buttonTextChange("Pick Less Things", "Pick a few Things", '#preset_button');
