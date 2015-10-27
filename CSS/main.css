@@ -3,15 +3,13 @@ body {
   text-decoration: none;
   margin: 0;
 }
-html h1, html h2, html h3, html h4, html h5, html h6,
-body h1,
-body h2,
-body h3,
-body h4,
-body h5,
-body h6,
-form label {
-  font-family: 'Cabin', sans-serif;
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Istok Web", sans-serif;
+}
+
+p,
+.generate_button {
+  font-family: "Lora", serif;
 }
 
 header, footer {
@@ -33,7 +31,7 @@ header h1, footer h1 {
   width: 100%;
   margin: 0 auto;
   background-color: #f1f1f1;
-  height: 1300px;
+  height: 110%;
 }
 
 .button_container {
@@ -59,8 +57,8 @@ header h1, footer h1 {
 
 .form_container {
   background-color: #D46A6A;
-  width: 65%;
-  height: 275px;
+  width: 70%;
+  height: 285px;
   display: none;
   margin: auto;
   margin-top: 25px;
@@ -68,7 +66,7 @@ header h1, footer h1 {
 
 .npc_info_wrapper {
   background-color: #D46A6A;
-  width: 65%;
+  width: 70%;
   height: 775px;
   display: flex;
   align-items: center;
@@ -78,7 +76,7 @@ header h1, footer h1 {
 .npc_container {
   border-radius: 5px;
   height: 93%;
-  width: 86.5%;
+  width: 92.5%;
   background-color: #AA3939;
   display: flex;
   flex-direction: column;
@@ -87,7 +85,7 @@ header h1, footer h1 {
 }
 
 form {
-  padding-top: 35px;
+  padding-top: 40px;
 }
 
 form select,
@@ -144,7 +142,7 @@ input[type=submit] {
 
 .generate_button {
   display: inline-block;
-  padding: 10px 8px;
+  padding: 6px 8px;
   height: 35px;
   width: 100px;
   border: 6px solid #D46A6A;
@@ -155,7 +153,6 @@ input[type=submit] {
   color: #fff;
   font-size: .86em;
   letter-spacing: 2px;
-  font-weight: 700;
 }
 
 input[type=submit]:hover,
@@ -186,7 +183,7 @@ input[type=submit]:active,
 }
 
 .npc {
-  margin-left: 15px;
+  margin-left: 10px;
   margin-top: 5px;
   font-size: .9em;
   color: #f2f2f2;
